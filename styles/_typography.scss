@@ -1,0 +1,95 @@
+$header-font: 'Montserrat', sans-serif;
+$paragraph-font: 'Roboto', sans-serif;
+
+body {
+  font-family: $header-font;
+}
+.header-1, .header-3, .header-4, .paragraph {
+  color: $main-black;
+}
+.header-1 {
+  color: $main-black;
+  font-family: $header-font;
+  font-size: 8rem;
+}
+.header-2 {
+  font-size: 8.6rem;
+  color: $side-grey;
+   writing-mode: vertical-lr;
+}
+.header-3 {
+  font-size: 3rem;
+  color: $main-black;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+.header-4 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  line-height: 4rem;
+}
+.header-5 {
+  font-size: 2rem;
+  &--small {
+    font-size: 1.8rem;
+  }
+  &--reduced {
+    color: $main-grey;
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+  }
+  &--footer {
+    color: $main-yellow;
+  }
+}
+.header-6 {
+  font-size: 1.2rem;
+  color: $main-grey;
+  text-transform: uppercase;
+}
+.list__link {
+ color: $secondary-grey;
+}
+.paragraph {
+  font-family: $paragraph-font;
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  &--light {
+    color: $main-grey;
+  }
+  &--lighter {
+    color: $secondary-grey;
+  }
+  &--lightest {
+    color: $paragraph-grey;
+  }
+  &--white {
+    color: $white;
+  }
+  &--small {
+    font-size: 1.6rem;
+  }
+  &--smaller {
+    font-size: 1.5rem;
+  }
+  &--smallest {
+    font-size: 1.4rem;
+  }
+  &--largest {
+    font-size: 2.8rem;
+  }
+  &--vertical {
+    writing-mode: vertical-rl;
+    text-align: center;
+    line-height: 4;
+  }
+}
+.btn {
+  font-family: $header-font;
+  font-size: 1.6rem;
+  &--light {
+    border: 2px solid $white;
+    color: $white;
+  }
+}

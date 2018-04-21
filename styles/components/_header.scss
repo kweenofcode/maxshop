@@ -3,6 +3,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   padding: 2%;
+  position: relative;
   &__logo {
     padding: 20px 0;
   }
@@ -11,26 +12,125 @@
     list-style: none;
   }
   &__item {
-    color: $main-yellow;
     display: inline-block;
     font-size: 2.2rem;
-    padding: 20px 15%;
+    border-bottom: 3px solid transparent;
+    padding: 10px;
+    margin: 0 10px;
     text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    &:hover {
+      border-bottom: 3px solid $main-yellow;
+      color: $main-black;
+    }
+    &--drop-down {
+      padding-right: 30px;
+      &::after {
+        content: url("../images/down-arrow.png");
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+      }
+    }
   }
-  &__country {
-    display: flex;
-    padding: 20px 0;
-    justify-content: space-between;
-  }
-  &__country__select {
-    appearance: none;
-    border: none;
+}
+.country {
+  display: flex;
+  flex-flow: column wrap;
+  position: absolute;
+  background: white;
+  margin: 0;
+  padding: 0;
+  &:after {
+    content: url("../images/down-arrow.png");
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 25px;
+  } 
+  &__select {
     font-size: 1.8rem;
-    padding: 10px 20px;
     color: $secondary-grey;
+    display: flex;
+    &__option {
+      display: none;
+      & + label {
+      display: none;
+      padding: 20px 40px;
+        & img {
+          display: inline;
+          margin-right: 10px;
+        }
+      }
+      &:checked + label {
+        display: block;
+        }
+      }
+    }
+  &:hover label {
+    display: block;
+    background: white;
+    &:hover {
+      color: white;
+      background: $main-yellow;
+    }
   }
 }
 .fa-search, .fa-user, .fa-shopping-bag {
+  color: $main-grey;
   font-size: 3rem;
   margin: 20px;
+}
+.fa-angle-right, .fa-angle-left {
+  color: $secondary-grey;
+  font-size: 3.3rem;
+  font-weight: lighter;
+}
+.headline {
+  display: flex;
+  justify-content: space-between;
+  &__text {
+    position: relative;
+    left: 200px;
+    z-index: 2;
+    &--right {
+      text-align: right;
+      left: 0;
+    }
+    &__date{
+      position: relative;
+      &__date::after {
+        content: "";
+        display: block;
+        background: $main-grey;
+        width: 62px;
+        height: 2px;
+        position: absolute; 
+        bottom: -10px;
+      }
+    }
+    &__title {
+      display: block;
+      width: 100%;
+    }
+  }
+}
+.flip-image {
+  position: relative; 
+  &__icons {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding: 0;
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__item {
+      background: $white;
+      padding: 30px;
+    }
+  }
 }

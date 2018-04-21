@@ -9,10 +9,9 @@ $white: #fff;
 $faded-grey: rgba(170,170,170,0.2);
 $paragraph-grey: #666;
 
-html {
-  font-size: 62.5%;
-}
-img {
-  display: block;
-  max-width: 100%;
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
 }
