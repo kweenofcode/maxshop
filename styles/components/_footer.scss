@@ -6,6 +6,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
     max-width: 1270px;
+    padding: 0;
     &__content {
       display: flex;
       flex-flow: column wrap;
@@ -14,41 +15,52 @@
       &:nth-child(4){
          margin-right: 0;
      }
+     &--tags {
+       @media (max-width: $third-breakpoint) {
+         display: none;
+       }
+     }
     }
   }
 }
+.contact__info {  
+  margin: 2px 0;
+  &:first-of-type {
+    margin: 5px 0 30px;
+  }
+}
 .footer-subwrapper {
+  align-items: center;
   display: flex;
   flex-flow: column wrap;
-  align-items: center;
 }
 .instagram {
   display: flex;
   flex-flow: row wrap;
   max-width: 250px;
   &__grid {
-    position: relative;
     margin: 0 10px 10px 0;
-    width: calc((100% - 20px) / 3);
+    position: relative;
     text-align: center;
+    width: calc((100% - 20px) / 3);
     &:nth-child(3n) {
       margin: 0 0 10px 0;
     }
     &__text {
-      display: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
       bottom: 0;
-      font-size: 4rem;
       color: $white;
+      display: none;
+      font-size: 4rem;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
    }
    &:hover &__text {
-    display: flex;
-    justify-content: center;
     align-items: center;
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+    display: flex;
+    justify-content: center;
    }
   }
 }
@@ -59,13 +71,13 @@
   background: $subfooter-grey;
   padding: 30px;
   &__content {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
   }
   &__nav {
-    padding: 0 25px;
     border-right: 1px solid $main-grey;
+    padding: 0 25px;
     &__item {
       margin: 0;
     }

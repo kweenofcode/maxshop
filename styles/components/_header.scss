@@ -1,25 +1,30 @@
 .main-nav {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   padding: 2%;
   position: relative;
   &__logo {
     padding: 20px 0;
+    flex: 0 0 240px;
   }
   &__list {
     display: flex;
+    flex: 10 1 300px;
+    justify-content: center;
+    flex-flow: row wrap;
     list-style: none;
   }
   &__item {
     display: inline-block;
-    font-size: 2.2rem;
     border-bottom: 3px solid transparent;
     padding: 10px;
     margin: 0 10px;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     position: relative;
+    transition: border-bottom .25s ease-in-out;
     &:hover {
       border-bottom: 3px solid $main-yellow;
       color: $main-black;
@@ -35,10 +40,22 @@
       }
     }
   }
+  &__icons,  &__country  {
+    flex: 0 1 150px;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__country {
+    justify-content: center;
+  }
 }
 .country {
   display: flex;
+  flex: 1 0 100px;
   flex-flow: column wrap;
+  align-items: center;
   position: absolute;
   background: white;
   margin: 0;
@@ -49,17 +66,18 @@
     display: block;
     position: absolute;
     right: 0;
-    top: 25px;
+    top: -5px;
   } 
   &__select {
-    font-size: 1.8rem;
-    color: $secondary-grey;
-    display: flex;
     &__option {
       display: none;
       & + label {
       display: none;
       padding: 20px 40px;
+      transform: translateY(-50%);
+      @media (max-width: $first-breakpoint) {
+        padding: 20px 20px;
+      }
         & img {
           display: inline;
           margin-right: 10px;
@@ -71,7 +89,8 @@
       }
     }
   &:hover label {
-    display: block;
+    display: flex;
+    flex: 1 0 100px;
     background: white;
     &:hover {
       color: white;
@@ -79,27 +98,23 @@
     }
   }
 }
-.fa-search, .fa-user, .fa-shopping-bag {
-  color: $main-grey;
-  font-size: 3rem;
-  margin: 20px;
-}
 .headline {
   display: flex;
-  justify-content: space-between;
+  flex-flow: row nowrap;
   position: relative;
   &__text {
     position: relative ;
     left: 200px;
-    z-index: 2;
+    z-index: 10;
     &--right {
       text-align: right;
       position: absolute;
       padding: 20% 0;
+      right: 0;
+    }
+    @media (max-width: $first-breakpoint) {
       left: 0;
       right: 0;
-      bottom: 0;
-      top: 0;      
     }
     &__date{
       position: relative;
@@ -114,8 +129,10 @@
       }
     }
     &__title {
-      display: block;
       width: 100%;
+      @media (max-width: 1600px) {
+      margin-bottom: 10px;
+      }
     }
     &__icon {
       position: absolute;
@@ -129,12 +146,17 @@
     z-index: -1;
     color: $faded-grey;
     bottom: 0;
-    left: 10%;
+    left: 150px;
     font-size: 50rem;
+    @media (max-width: $first-breakpoint) {
+      font-size: 40rem;
+      left: 0;
+      bottom: -15%;
+    }
   }
 }
 .flip-image {
-  position: relative; 
+  position: relative;
   &__paragraph {
     position: absolute;
     width: 100%;
@@ -147,6 +169,7 @@
     position: absolute;
     top: 0;
     right: 0;
+    background: rgba(255,255,255,0.4);
     &__svg {
       width: 100%;
       height: 700px;
@@ -160,35 +183,48 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    padding: 0;
     margin: 0;
     background: $white;
     display: flex;
+    padding: 20px 10px;
     align-items: center;
     justify-content: center;
-    color: $secondary-grey;
     font-size: 3.3rem;
     font-weight: lighter;
     &--left {
-      left: 100px;
-      right: 100%;
-      top: 0;
+      padding: 15px 5px;
+      bottom: 50%;
+      right: 77%;
+      background: $hover-font;
+      transform: translateY(50%);
+      z-index: 30;
     }
     &__item {
       background: $white;
-      padding: 30px;
+      padding: 0 30px;
       border: none;
+      border-right: 1px solid $main-grey;
+      color: $secondary-grey;
+      z-index: 40; 
+      transform: scaleY(1.5);
+      transition: all 0.25s ease-in-out;
+      &:last-of-type {
+        border-right: none;
+      }
+      &:hover {
+        color: $main-yellow;
+      }
       &--dark {
         background: $hover-font;
-        padding: 10px 20px; 
       }
-      &--small {
-      padding: 10px 20px; 
+      @media (max-width: $second-breakpoint){
+        transform: none;
+        padding: 0 10px;
       }
-      &:first-of-type {
-        color: $main-yellow;
-        border-right: 1px solid $border-grey;
-      }
+    }
+    @media (max-width: $second-breakpoint){
+      font-size: 2rem;
+      padding: 10px 5px;
     }
   }
 }

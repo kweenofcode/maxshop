@@ -1,6 +1,9 @@
 $header-font: 'Montserrat', sans-serif;
 $paragraph-font: 'Roboto', sans-serif;
 
+html {
+  font-size: 62.5%;
+}
 body {
   font-family: $header-font;
 }
@@ -14,15 +17,18 @@ body {
   color: $main-black;
   font-family: $header-font;
   font-size: 8rem;
+  @media (max-width: $first-breakpoint) {
+    font-size: 7rem;
+  }
 }
 .header-2 {
-  font-size: 8.6rem;
   color: $side-grey;
-   writing-mode: vertical-lr;
+  font-size: 8.6rem;
+  writing-mode: vertical-lr;
 }
 .header-3 {
-  font-size: 3rem;
   color: $main-black;
+  font-size: 3rem;
   font-weight: 400;
   letter-spacing: 1px;
   &--white {
@@ -41,9 +47,9 @@ body {
   }
   &--reduced {
     color: $main-grey;
-    text-decoration: line-through;
-    font-weight: lighter;
     font-size: 1.5rem;
+    font-weight: lighter;
+    text-decoration: line-through;
   }
   &--footer {
     color: $main-yellow;
@@ -55,16 +61,34 @@ body {
   }
 }
 .header-6 {
-  font-size: 1.2rem;
   color: $main-grey;
+  font-size: 1.2rem;
+  &--uppercase {
+    @extend %--uppercase;
+  }
 }
 .list__link {
  color: $secondary-grey;
+ font-size: 2.2rem;
+ transition: color .25s ease-in-out;
+ @media (max-width: 1600px) {
+   font-size: 1.7rem;
+ }
+}
+.list__label {
+    font-size: 1.8rem;
+    color: $secondary-grey;
+    @media (max-width: $first-breakpoint) {
+      font-size: 1.5rem;
+    }
 }
 .paragraph {
   font-family: $paragraph-font;
   font-size: 1.8rem;
   line-height: 2.4rem;
+  @media (max-width: $first-breakpoint){
+    font-size: 1.5rem;
+  }
   &--light {
     color: $main-grey;
   }
@@ -79,6 +103,12 @@ body {
   }
   &--small {
     font-size: 1.6rem;
+    @media (max-width: $first-breakpoint){
+      font-size: 1.4rem;
+    }
+    @media (max-width: $second-breakpoint){
+      font-size: 1.3rem;
+    }
   }
   &--smaller {
     font-size: 1.5rem;
@@ -90,12 +120,12 @@ body {
     font-size: 2.8rem;
   }
   &--vertical {
-    writing-mode: vertical-rl;
-    text-align: center;
     line-height: 4;
+    text-align: center;
+    writing-mode: vertical-rl;
     &--uppercase {
-      text-transform: uppercase;
       letter-spacing: 2px;
+      text-transform: uppercase;
       writing-mode: vertical-lr;
     }
   }
@@ -104,11 +134,11 @@ body {
   }
 }
 .btn {
+  color: $main-black;
   font-family: $header-font;
   font-size: 1.6rem;
-  text-decoration: none;
-  color: $main-black;
   text-align: center;
+  text-decoration: none;
   &--light {
     border: 2px solid $white;
     color: $white;
@@ -116,10 +146,23 @@ body {
   &--white {
     color: $white;
   }
+  &--left {
+    text-align: left;
+  }
   &--small {
     font-size: 1.4rem;
   }
-  &--left {
-    text-align: left;
+  &--large {
+    font-size: 1.8rem;
+  }
+  @media (max-width: $first-breakpoint){
+    font-size: 1.3rem;
+  }
+}
+.fa-search, .fa-user, .fa-shopping-bag {
+  color: $main-grey;
+  font-size: 3rem;
+  @media (max-width: $first-breakpoint) {
+    font-size: 2rem;
   }
 }
