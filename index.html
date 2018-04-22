@@ -56,7 +56,7 @@
           <p class="headline__text__paragraph paragraph paragraph--light paragraph--large">Bring glamour to your wardrobe</p>
           <h1 class="headline__text__title header-1">Summer <br> Collection 2016</h1>
           <a class="btn" href="#">View More</a>
-          <img src="./images/icon.png" alt="">
+          <img class="headline__text__icon" src="./images/icon.png" alt="">
         </div>
         <div class="flip-image">
           <img src="./images/main-image-1.png" alt="">
@@ -87,8 +87,9 @@
       </li>
     </ul>
   </nav>
-  <main class="wrapper">
-    <section class="wrapper__inner-wrapper current-season">
+  <main class="wrapper season">
+    <h2 class="header-2 season__title--vertical">Spring/Summer</h2>
+    <section class="wrapper__inner-wrapper">
       <h3 class="header-3">Top Products</h3>
       <div>
         <p class="paragraph paragraph--lightest">Come & Check our new spring summer collection 2016</p>
@@ -97,26 +98,34 @@
       <div>
         <ul class="list">
           <li>
-            <img src="./images/top-product-1.png" alt="A model in a beige cableknit sweater">
-            <i class="fa fa-shopping-bag"></i>
+            <div class="sale-item">
+              <img src="./images/top-product-1.png" alt="A model in a beige cableknit sweater">
+              <i class="fa fa-shopping-bag"></i>
+            </div>
             <p class="paragraph paragraph--small">Lipsy Crochet Applique Wrap<br><span class="paragraph--light">Blouse</span></p>
             <h5 class="header-5 header-5--small">$120.00<span class="header-5--reduced">$150.00</span></h5>
          </li>
-         <li>
-            <img src="./images/top-product-2.png" alt="Model in long white jacket">
-            <i class="fa fa-shopping-bag"></i>
+        <li>
+            <div class="sale-item">
+              <img src="./images/top-product-2.png" alt="Model in long white jacket">
+              <i class="fa fa-shopping-bag"></i>
+            </div>
             <p class="paragraph paragraph--small">Sweatshirt in Grey Marl<br><span class="paragraph--light">T-Shirt</span></p>
             <h5 class="header-5 header-5--small">$110.00</h5>
           </li>
           <li>
-            <img src="./images/top-product-3.png" alt="Model in black shirt button-down shirt and broad-rimmed black felt hat">
-            <i class="fa fa-shopping-bag"></i>
+            <div class="sale-item">
+              <img src="./images/top-product-3.png" alt="Model in black shirt button-down shirt and broad-rimmed black felt hat">
+              <i class="fa fa-shopping-bag"></i>
+            </div>
             <p class="paragraph paragraph--small">Embroidered Flippy<br><span class="paragraph--light">Dress</span></p>
             <h5 class="header-5 header-5--small">$145.00</h5>
           </li>
           <li>
-            <img src="./images/top-product-4.png" alt="Model in grey t-shirt and blue baseball cap">
-            <i class="fa fa-shopping-bag"></i>
+            <div class="sale-item">
+              <img src="./images/top-product-4.png" alt="Model in grey t-shirt and blue baseball cap">
+              <i class="fa fa-shopping-bag"></i>
+            </div>
             <p class="paragraph paragraph--small">Embroidered Skater<br><span class="paragraph--light">Dress</span></p>
             <h5 class="header-5 header-5--small">$120.00</h5>
           </li>
@@ -125,10 +134,16 @@
       <div class="headline">
         <div class="flip-image">
           <img src="./images/main-image-2.png" alt="">
-          <ul class="flip-image__icons">
-            <li class="flip-image__icons__item"><i class="fa fa-angle-left"></i></li>
-            <li class="flip-image__icons__item"><i class="fa fa-angle-right"></i></li>
-          </ul>
+          <p class="paragraph--vertical paragraph--vertical--uppercase flip-image__paragraph">By Marc Jacobs</p>
+          <div class="flip-image__outline">
+            <svg class="flip-image__outline__svg" version="1.1" xmlns="http://www.w3.org/2000/svg">
+              <rect x="200" y="100" width="600" height="350"/>
+            </svg>
+          </div>
+          <div class="flip-image__icons flip-image__icons--left">
+            <button class="flip-image__icons__item flip-image__icons__item--dark"> < </button>
+            <button class="flip-image__icons__item flip-image__icons__item--dark"> > </button>
+          </div>
         </div>
         <div class="headline__text headline__text--right">
           <h3 class="headline__text__title header-3">Salvator Ferragamo <br> Lookbook Spring/Summer 2016</h3>
@@ -136,17 +151,11 @@
           <a href="#" class="btn">Get the Look!</a>
         </div>
       </div>
-      <p>By Marc Jacobs</p>
     </section>
-    <aside>
-      <h2 class="header-2">Spring/Summer</h2>
-    </aside>
   </main>
-  <section class="wrapper">
-   <div class="wrapper__inner-wrapper">
-      <aside>
-        <h2 class="header-2">Summer Sale</h2>
-      </aside>
+  <section class="wrapper season">
+    <h2 class="header-2 season__title--vertical season__title--left">Summer Sale</h2>
+    <div class="wrapper__inner-wrapper">
       <div>
         <div>
           <h3 class="header-3">Onsale Products</h3>
@@ -157,31 +166,39 @@
         </div>
         <ul class="list">
           <li>
-            <img src="./images/onsale-products-1.png" alt="Model in a white button-down and jeans">
-            <i class="fa fa-shopping-bag"></i>
+            <div class="sale-item">
+              <img src="./images/onsale-products-1.png" alt="Model in a white button-down and jeans">
+              <i class="fa fa-shopping-bag"></i>
+            </div>
               <p class="paragraph paragraph--small">Lipsy Crochet Applique Wrap<br><span class="paragraph--light">Blouse</span></p>
               <h5 class="header-5 header-5--small">$120.00<span class="header-5--reduced">$150.00</span></h5>
           </li>
           <li>
-            <img src="./images/onsale-products-2.png" alt="Model in black  baseball cap and denim jacket">
-            <i class="fa fa-shopping-bag"></i>
+            <div class="sale-item">
+              <img src="./images/onsale-products-2.png"   alt="Model in black  baseball cap and denim jacket">
+              <i class="fa fa-shopping-bag"></i>
+            </div>
             <p class="paragraph paragraph--small">Sweatshirt in Grey Marl<br>
             <span class="paragraph--light">T-Shirt</span></p>
             <h5 class="header-5 header-5--small">$88.00<span class="header-5--reduced">$120.00</span>
             </h5>
           </li>
            <li>
-            <img src="./images/onsale-products-3.png" alt="Model in high-waisted two piece bathing suit">
-            <i class="fa fa-shopping-bag"></i>
+            <div class="sale-item">
+              <img src="./images/onsale-products-3.png" alt="Model in high-waisted two piece bathing suit">
+              <i class="fa fa-shopping-bag"></i>
+           </div>
               <p class="paragraph paragraph--small">Oysho Crop & Vest Set<br>
               <span class="paragraph--light">Dress</span></p>
               <h5 class="header-5 header-5--small">$112.00<span class="header-5--reduced">$140.00</span></h5>
          </li>
          <li>
+          <div class="sale-item">
             <img src="./images/onsale-products-4.png" alt="Model in shawl">
             <i class="fa fa-shopping-bag"></i>
-              <p class="paragraph paragraph--small">55DSL Lightning Bolt Sweatshirt<br><span class="paragraph--light">Sweatshirts</span></p>
-              <h5 class="header-5 header-5--small">$80.00<span class="header-5--reduced">$100.00</span></h5>
+          </div>
+            <p class="paragraph paragraph--small">55DSL Lightning Bolt Sweatshirt<br><span class="paragraph--light">Sweatshirts</span></p>
+            <h5 class="header-5 header-5--small">$80.00<span class="header-5--reduced">$100.00</span></h5>
         </li>
         </ul>
       </div>
@@ -189,25 +206,26 @@
   </section>
   <section class="wrapper">
     <div class="wrapper__inner-wrapper">
-      <article>
-        <div>
-          <h3 class="blog-title header-3">Our Blog</h3>
-          <div class="blog blog--first">
-          <h6 class="blog__subtitle header-6">Lookbook</h6>
-          <h5 class="blog__title header-5">Excerpt: A Sense of Belonging</h5>
-          <p class="blog__date paragraph paragraph--smallest paragraph--light">4 October 2016 / 368 Comments</p>
-          <p class="blog__content paragraph paragraph--smaller paragraph--lighter">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, ipsum natus! Nisi quasi, aspernatur excepturi est aliquid sit quibusdam rerum sapiente pariatur qui at magnam, explicabo mollitia deleniti porro, cum consequatur. Nemo ut possimus illum quaerat recusandae et labore earum?</p>
-       </div>
-       <img class="blog__image blog__img--1" src="./images/blog-1.png" alt="">
-      </articlev>
+      <h3 class="blog-title header-3">Our Blog</h3>
+      <article class="blog blog--first">
+          <div class="blog__text">
+            <h6 class="blog__subtitle header-6">Lookbook</h6>
+            <h5 class="blog__title header-5">Excerpt: A Sense of Belonging</h5>
+            <p class="blog__date paragraph paragraph--smallest paragraph--light">4 October 2016 / 368 Comments</p>
+            <p class="blog__content paragraph paragraph--smaller paragraph--lighter">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, ipsum natus! Nisi quasi, aspernatur excepturi est aliquid sit quibusdam rerum sapiente pariatur qui at magnam, explicabo mollitia deleniti porro, cum consequatur. Nemo ut possimus illum quaerat recusandae et labore earum?</p>
+          </div>
+          <img class="blog__image blog__img--1" src="./images/blog-1.png" alt="">
+      </article>
       <article class="blog blog--second">
-        <img class="blog__img--2" src="./images/Blog-2.png" alt="">
-        <div class="toggle-arrows">
-          <i class="fa fa-angle-left"></i>
-          <i class="fa fa-angle-right"></i>
+        <div class="blog__image flip-image">
+          <img class="blog__img--2" src="./images/Blog-2.png" alt="">
+          <div class="flip-image__icons">
+            <button class="flip-image__icons__item flip-image__icons__item--small"> < </button>
+            <button class="flip-image__icons__item flip-image__icons__item--small"> > </button>
+          </div>
         </div>
-        <div>
-          <h6 class="blog__subtitle header-6">Campaign</h6>
+        <div class="blog__text blog__text--second">
+          <h6 class="header-6">Campaign</h6>
           <h5 class="blog__title header-5">Chester & Peck 2016</h5>
           <p class="blog__date paragraph paragraph--smallest paragraph--light">4 October 2016 / 368 Comments</p>
           <p class="blog__content paragraph paragraph--smaller paragraph--lighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita culpa sunt, nemo, porro, suscipit officiis doloremque architecto deleniti ea amet minus est ad illum nam vero hic pariatur fuga numquam autem. Cumque ut cupiditate quis inventore autem nemo, maxime dignissimos.</p>
@@ -215,107 +233,109 @@
       </article>
     </div>
   </section>
-  <section class="wrapper">
-    <div>
-      <div class="cta cta-2">
-        <h3 class="cta__header header-3">Rethink Your Design</h3>
-        <p class="cta__subtitle paragraph">Minimal & Modern Look</p>
-        <a class="btn btn--light" href="#">Discover More</a>
+  <section>
+    <div class="cta">
+      <div class="cta__footer cta__footer--first">
+        <div>
+         <h3 class="cta__header header-3 header-3--white">Rethink Your Design</h3>
+          <p class="cta__subtitle paragraph paragraph--white">Minimal & Modern Look</p>
+          <a class="btn btn--light" href="#">Discover More</a>
+        </div>
       </div>
-      <div class="cta cta-2">
-        <h3 class="cta__header header-3">We are fashion shop</h3>
-        <p class="cta__subtitle paragraph">Revolutionary Concepts</p>
-        <a class="btn" href="#">Shop Now</a>
+      <div class="cta__footer cta__footer--second">
+        <div>
+          <h3 class="cta__header header-3 header-3--cta">We are fashion shop</h3>
+          <p class="cta__subtitle paragraph paragraph">Revolutionary Concepts</p>
+          <a class="btn" href="#">Shop Now</a>
+        </div>
       </div>
     </div>
   </section>
-  <footer>
-    <div class="wrapper">
-      <div class="contact">
+  <footer class="main-footer">
+    <div class="wrapper main-footer__wrapper">
+      <div class="main-footer__wrapper__content contact">
         <h5 class="contact__info contact header-5 header-5--footer">Contact</h5>
         <p class="paragraph paragraph--small paragraph--white">621 Bingammon Branch Road Warwick<br>NY 10990</p>
         <p class="paragraph paragraph--small paragraph--white">Phone: 845-988-7165</p>
         <p class="paragraph paragraph--small paragraph--white">Fax: 814-468-0188</p>
         <p class="paragraph paragraph--small paragraph--white">Email: Support@maxshop.com</p>
       </div>
-      <div class="tags">
+      <div class="main-footer__wrapper__content">
         <h5 class="tags__header header-5 header-5--footer">Tags</h5>
-        <button class="tags__btn btn">creative</button>
-        <button class="tags__btn btn">blog</button>
-        <button class="tags__btn btn">maxshopthemes</button>
-        <button class="tags__btn btn">themeforest</button>
-        <button class="tags__btn btn">logo</button>
-        <button class="tags__btn btn">template</button>
-        <button class="tags__btn btn">psd</button>
-        <button class="tags__btn btn">wordpress</button>
-      </div>
-      <div class="instagram">
-        <h5 class="instagram__header header-5 header-5--footer">Instagram</h5>   
-        <ul class="instagram__grid list">
-          <li>
-            <figure>
-              <img src="./images/insta-1.png" alt="">
-              <figcaption>+</figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="./images/insta-2.png" alt="">
-              <figcaption>+</figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="./images/insta-3.png" alt="">
-              <figcaption>+</figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="./images/insta-4.png" alt="">
-              <figcaption>+</figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="./images/insta-5.png" alt="">
-              <figcaption>+</figcaption>
-            </figure>
-          </li>
-          <li>
-            <figure>
-              <img src="./images/insta-6.png" alt="">
-              <figcaption>+</figcaption>
-            </figure>
-          </li>
-        </ul>
-      </div>
-      <div class="newsletter">
-        <h5 class="newsletter__header header-5 header-5--footer">Newsletter</h5>
-        <p class="newsletter__info paragraph paragraph--small paragraph--white">Signup for our Newsletter & Events</p>
-        <input class="newsletter__input" type="email">
-        <input class="newsletter__submit" type="submit" value=Signup>
-      </div>
-      <div>
-        <h5 class="header-5 header-5--footer">Follow us on</h5>
-        <div class="social">
-          <a class="social__btn btn" href="">Behance</a>
-          <a class="social__btn btn" href="">Dribble</a>
-          <a class="social__btn btn" href="">Themeforest</a>
-          <a class="social__btn btn" href="">Pinterest</a>
-          <a class="social__btn btn" href="">Facebook</a>
-          <a class="social__btn btn" href="">Twitter</a>
+        <div>
+          <button class="btn btn--square btn--white btn--small">creative</button>
+          <button class="btn btn--square btn--white btn--small">blog</button>
+          <button class="btn btn--square btn--white btn--small">maxshopthemes</button>
+          <button class="btn btn--square btn--white btn--small">themeforest</button>
+          <button class="btn btn--square btn--white btn--small">logo</button>
+          <button class="btn btn--square btn--white btn--small">template</button>
+          <button class="btn btn--square btn--white btn--small">psd</button>
+          <button class="btn btn--square btn--white btn--small">wordpress</button>
         </div>
       </div>
-      <div class="copyright">
-        <p class="copyright__copy paragraph--small paragraph--white">&copy; Maxshop 2016. All Rights Reserved</p>
-        <ul class="copyright__nav list">
-          <li class="copyright__nav__item"><p class="paragraph paragraph--small paragraph--white"> Terms of use </p></li>
-          <li class="copyright__nav__item"><p class="paragraph paragraph--small paragraph--white">Privacy Policy</p></li>
-          <li class="copyright__nav__item"><p class="paragraph paragraph--small paragraph--white">Contact Us</p></li>
-        </ul>
+      <div class="main-footer__wrapper__content">
+        <h5 class="instagram__header header-5 header-5--footer">Instagram</h5>   
+        <div class="instagram">
+          <figure class="instagram__grid">
+              <img src="./images/insta-1.png" alt="">
+              <figcaption class="instagram__grid__text">+</figcaption>
+          </figure>
+          <figure class="instagram__grid">
+            <img src="./images/insta-2.png" alt="">
+            <figcaption class="instagram__grid__text">+</figcaption>
+          </figure>
+          <figure class="instagram__grid">
+            <img src="./images/insta-3.png" alt="">
+            <figcaption class="instagram__grid__text">+</figcaption>
+          </figure>
+          <figure class="instagram__grid">
+            <img src="./images/insta-4.png" alt="">
+            <figcaption class="instagram__grid__text">+</figcaption>
+          </figure>
+          <figure class="instagram__grid">
+            <img src="./images/insta-5.png" alt="">
+            <figcaption class="instagram__grid__text">      +</figcaption>
+          </figure>
+          <figure class="instagram__grid">
+            <img src="./images/insta-6.png" alt="">
+            <figcaption class="instagram__grid__text">+</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="main-footer__wrapper__content newsletter">
+        <h5 class="newsletter__header header-5 header-5--footer">Newsletter</h5>
+        <p class="newsletter__info paragraph paragraph--small paragraph--white">Signup for our Newsletter & Events</p>
+        <div class="newsletter">
+          <input class="btn btn--square btn--white btn--left" type="email" placeholder="Email Address">
+          <input class="btn btn--square btn--white" type="submit" value=Signup>
+        </div>
       </div>
     </div>
+      <div class="footer-subwrapper">
+        <div class="footer-subwrapper__content footer-subwrapper--center">
+          <h5 class="header-5 header-5--footer header-5--center ">Follow us on</h5>
+          <div class="social">
+            <a class="btn btn--white" href="">Behance</a>
+            <a class="btn btn--white" href="">Dribble</a>
+            <a class="btn btn--white" href="">Themeforest</a>
+            <a class="btn btn--white" href="">Pinterest</a>
+            <a class="btn btn--white" href="">Facebook</a>
+            <a class="btn btn--white" href="">Twitter</a>
+          </div>
+        </div>
+        </div>
+      </footer>
+      <footer class="subfooter">
+        <div class="wrapper">
+        <div class="subfooter__content copyright">
+          <p class="subfooter__nav__item paragraph--small paragraph--white">&copy; Maxshop 2016. All Rights Reserved</p>
+          <ul class="list">
+            <li class="subfooter__nav"><p class="subfooter__nav__item paragraph paragraph--small paragraph--white"> Terms of use </p></li>
+            <li class="subfooter__nav"><p class="subfooter__nav__item paragraph paragraph--small paragraph--white">Privacy Policy</p></li>
+            <li class="subfooter__nav"><p class="subfooter__nav__item paragraph paragraph--small paragraph--white ">Contact Us</p></li>
+          </ul>
+        </div>
+      </div>
   </footer>
 </body>
 </html>

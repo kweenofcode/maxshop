@@ -43,6 +43,7 @@
   background: white;
   margin: 0;
   padding: 0;
+  z-index: 10;
   &:after {
     content: url("../images/down-arrow.png");
     display: block;
@@ -83,21 +84,22 @@
   font-size: 3rem;
   margin: 20px;
 }
-.fa-angle-right, .fa-angle-left {
-  color: $secondary-grey;
-  font-size: 3.3rem;
-  font-weight: lighter;
-}
 .headline {
   display: flex;
   justify-content: space-between;
+  position: relative;
   &__text {
-    position: relative;
+    position: relative ;
     left: 200px;
     z-index: 2;
     &--right {
       text-align: right;
+      position: absolute;
+      padding: 20% 0;
       left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;      
     }
     &__date{
       position: relative;
@@ -115,22 +117,78 @@
       display: block;
       width: 100%;
     }
+    &__icon {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+   &::after {
+    content: "01";
+    position: absolute;
+    z-index: -1;
+    color: $faded-grey;
+    bottom: 0;
+    left: 10%;
+    font-size: 50rem;
   }
 }
 .flip-image {
   position: relative; 
+  &__paragraph {
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    left: 40px;
+    bottom: 0;
+    transform: rotate(180deg);
+  }
+  &__outline {
+    position: absolute;
+    top: 0;
+    right: 0;
+    &__svg {
+      width: 100%;
+      height: 700px;
+      stroke: $white;
+      stroke-width: 5px;
+      stroke-dasharray: 100, 100, 200, 550, 300, 200, 750;
+      fill: none;   
+    }
+  }
   &__icons {
     position: absolute;
     bottom: 0;
-    right: 10px;
+    right: 0;
     padding: 0;
+    margin: 0;
     background: $white;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: $secondary-grey;
+    font-size: 3.3rem;
+    font-weight: lighter;
+    &--left {
+      left: 100px;
+      right: 100%;
+      top: 0;
+    }
     &__item {
       background: $white;
       padding: 30px;
+      border: none;
+      &--dark {
+        background: $hover-font;
+        padding: 10px 20px; 
+      }
+      &--small {
+      padding: 10px 20px; 
+      }
+      &:first-of-type {
+        color: $main-yellow;
+        border-right: 1px solid $border-grey;
+      }
     }
   }
 }

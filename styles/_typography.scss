@@ -4,6 +4,9 @@ $paragraph-font: 'Roboto', sans-serif;
 body {
   font-family: $header-font;
 }
+%--uppercase {
+  text-transform: uppercase;
+}
 .header-1, .header-3, .header-4, .paragraph {
   color: $main-black;
 }
@@ -20,8 +23,11 @@ body {
 .header-3 {
   font-size: 3rem;
   color: $main-black;
-  font-weight: normal;
+  font-weight: 400;
   letter-spacing: 1px;
+  &--white {
+    color: white;
+  }
 }
 .header-4 {
   font-size: 2.8rem;
@@ -41,12 +47,16 @@ body {
   }
   &--footer {
     color: $main-yellow;
+    font-weight: 400;
+    @extend %--uppercase;
+  }
+  &--center {
+    text-align: center;
   }
 }
 .header-6 {
   font-size: 1.2rem;
   color: $main-grey;
-  text-transform: uppercase;
 }
 .list__link {
  color: $secondary-grey;
@@ -83,13 +93,33 @@ body {
     writing-mode: vertical-rl;
     text-align: center;
     line-height: 4;
+    &--uppercase {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      writing-mode: vertical-lr;
+    }
+  }
+  &--white {
+    color: $white;
   }
 }
 .btn {
   font-family: $header-font;
   font-size: 1.6rem;
+  text-decoration: none;
+  color: $main-black;
+  text-align: center;
   &--light {
     border: 2px solid $white;
     color: $white;
+  }
+  &--white {
+    color: $white;
+  }
+  &--small {
+    font-size: 1.4rem;
+  }
+  &--left {
+    text-align: left;
   }
 }
