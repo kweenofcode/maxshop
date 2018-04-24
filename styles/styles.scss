@@ -21,6 +21,9 @@
   &--footer, &--nav {
     padding: 0;
   }
+  &--footer {
+    padding: 0;
+  }
   &--blog {
     padding: 0;
   } 
@@ -29,12 +32,15 @@
     max-width: 65%;
     &--bottom {
       @extend %--padded-bottom;
+      @media (max-width: $fifth-breakpoint) {
+        padding-bottom: 20px;
+      }
     }
     @media (max-width: $first-breakpoint){
       max-width: 80%;
     }  
-    @media (max-width: $first-breakpoint){
-      max-width: 85%;
+    @media (max-width: $fourth-breakpoint){
+      max-width: 100%;
     }  
   }
   @media (min-width: $first-breakpoint) {
@@ -47,19 +53,24 @@
     max-width: 1200px;
   }
   @media (max-width: $third-breakpoint){
-    max-width: 1000px;
+    max-width: 90%;
+  }
+  @media (max-width: $third-breakpoint){
+    padding: 0 0 50px 0;
   }
 }
 .btn {
   border: 2px solid $main-yellow;
   border-radius: 30px;
   display: inline-block;
-  min-height: 55px;
   min-width: 175px;
   padding: 20px;
   transition: all .25s ease-in-out;
   @media (max-width: $second-breakpoint) {
     min-width: 150px ;
+  }
+  @media (max-width: $third-breakpoint) {
+    min-width: 120px ;
   }
   &--light {
     border: 2px solid $white;
@@ -75,7 +86,7 @@
     border-radius: 0;
     min-width: 0;
     margin: 10px 10px 0 0;
-    padding: 0 10px;
+    padding: 10px;
     &:hover {
       background: none;
       color: $main-yellow;
@@ -85,9 +96,13 @@
 .collections-nav__item {
   @extend %--padded-top;
   display: flex;
+  flex: 1 0 250px;
   flex-flow: row wrap;
   justify-content: space-around;
   position: relative;
+  &:nth-child(-n +2) {
+    margin-right: 20px;
+  }
   &__title {
     display: inline-block;
     bottom: 50px;
@@ -126,16 +141,27 @@
     @media (max-width: $first-breakpoint) {
       left: -12%;
     }
-     @media (max-width: $second-breakpoint) {
+    @media (max-width: $second-breakpoint) {
       top: 40%;      
       left: -15px;
-     }
+    }
+    @media (max-width: $third-breakpoint) {
+      display: none;
+    }
   }
   &__img--outlined {
     @extend %--outlined;
   }
-  @media (max-width: $second-breakpoint) {
-    margin: 5px;
+  &:nth-child(n + 2){
+    @media (max-width: $fourth-breakpoint) {
+      display: none;
+    }
+  }
+  @media (max-width: $third-breakpoint){
+    padding: 0;
+  }
+  @media (max-width: $fourth-breakpoint) {
+    margin: 40px 0;
   }
 }
 .season {
@@ -146,11 +172,10 @@
   top: 40%;
   transform: translateY(-50%);
     @media (max-width: $first-breakpoint) {
-      right: -100px;
+      right: -50px;
     }
     @media (max-width: $second-breakpoint){
       position: static;
-      writing-mode: horizontal-tb;
       margin: 0;
       transform: none;
     }
@@ -173,42 +198,77 @@
   }
   &--sale {
     padding: 100px 0;
+    @media (max-width: $fourth-breakpoint) {
+      padding: 25px 0;
+    }
   }
 }
-.sale-item {
-  position: relative;
-  &__reduction {
-    margin-left: 10px;
+.sale {
+  flex: 1 0 150px;
+  margin: 0 auto;
+  &:nth-child(-n + 3){
+    margin-right: 10px;
   }
-  .fa-shopping-bag {
-    background: $main-black;
-    bottom: -10px;
-    color: $white;
-    font-size: 5rem;
-    margin: 0;
-    padding: 5px 10px;
-    position: absolute;
-    right: 0;
-    transition: all .25s ease-in-out;
+    &__item {
+    position: relative;
+    &__cost {
+      @media (max-width: $second-breakpoint) {
+        margin: 0 0 20px 0;
+      }
+    }
+    &__reduction {
+      margin-left: 10px;
+    }
+    .fa-shopping-bag {
+      background: $main-black;
+      bottom: 0;
+      color: $white;
+      font-size: 5rem;
+      margin: 0;
+      padding: 5px 10px;
+      position: absolute;
+      right: 0;
+      transition: all .25s ease-in-out;
+    }
+    &:hover .fa-shopping-bag {
+      background: $main-yellow;
+    }
+    @media (max-width: $second-breakpoint){
+      left: 0;
+    }
   }
-  &:hover .fa-shopping-bag {
-    background: $main-yellow;
-  }
-  @media (max-width: $second-breakpoint){
-    left: 0;
-    padding: 10px;
+  @media (max-width: $third-breakpoint) {
+    flex: 2 0 290px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
   }
 }
 .blog {
   display: flex;
   flex-flow: row wrap;
+  padding: 0;
   &__image {
     flex: 1 0 250px;
     &--first {
       z-index: 10;
+      position: relative;
+      border: 15px solid $white;
     }
     &--second {
       z-index: 0;
+    }
+    @media (max-width: $third-breakpoint) {
+      border: none;
+      width: 80%;
+    }
+    @media (max-width: $fifth-breakpoint) {
+      width: 100%;
+      height: auto;
+    }
+    @media (max-width: $fifth-breakpoint) {
+    display: flex;
     }
   }
   &__text {
@@ -226,10 +286,17 @@
         padding: 10px 0 0 0;
         margin: 20px 15px 0 0;
       }
+      @media (max-width: $third-breakpoint) {
+        left: 0;
+      }
     }
     @media (max-width: $second-breakpoint){
       left: 0;
       padding: 0;
+    }
+    @media (max-width: $third-breakpoint) {
+        padding: 0;
+        margin: 0;
     }
   }
   &__title, &__date {
@@ -244,6 +311,22 @@
   &--second {
     bottom: 50px;
     position: relative;
+    @media (max-width: $third-breakpoint) {
+        bottom: 0;
+    }
+  }
+  @media (max-width: $third-breakpoint) {
+    display: column;
+    flex-flow: column wrap;
+    align-items: center;
+  }
+  &--first {
+    @media (max-width: $third-breakpoint) {
+      flex-flow: column-reverse wrap;
+    }
+  }
+  @media (max-width: $first-breakpoint){
+    padding: 0 20px;
   }
 }
 .cta {
@@ -263,12 +346,22 @@
     &--second {
       background-image: url('../images/footer-2.png');
     }
+    @media (max-width: $third-breakpoint) {
+      padding: 100px;
+    }
+    @media (max-width: $fourth-breakpoint) {
+      padding: 50px;
+    }
+    
   }
   &__header {
     margin: 0;
   }
   &__subtitle {
     margin: 1% 0 10%;
+  }
+  @media (max-width: $third-breakpoint) {
+    flex-flow: column wrap;
   }
 }
 @import "components/footer";

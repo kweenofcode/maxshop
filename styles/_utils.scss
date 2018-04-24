@@ -14,12 +14,14 @@ $subfooter-grey: #3e3e3e;
 $first-breakpoint: 1800px;
 $second-breakpoint: 1450px;
 $third-breakpoint: 1200px;
-$fourth-breakpoint: 500px;
+$fourth-breakpoint: 975px;
+$fifth-breakpoint: 550px;
 
 .list {
   list-style: none;
   padding: 0;
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-around;
 }
 %--outlined {
@@ -35,4 +37,5 @@ $fourth-breakpoint: 500px;
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }

@@ -20,11 +20,26 @@ body {
   @media (max-width: $first-breakpoint) {
     font-size: 7rem;
   }
+  @media (max-width: $first-breakpoint) {
+    font-size: 6rem;
+  }
+  @media (max-width: $fourth-breakpoint) {
+    font-size: 3rem;
+  }
 }
 .header-2 {
   color: $side-grey;
   font-size: 8.6rem;
   writing-mode: vertical-lr;
+  @media (max-width: $second-breakpoint) {
+    font-size: 7rem;
+    color: $main-black;
+    text-align: center;
+    writing-mode: horizontal-tb;
+  }
+  @media (max-width: $fourth-breakpoint) {
+    font-size: 3rem;      
+  }
 }
 .header-3 {
   color: $main-black;
@@ -34,11 +49,21 @@ body {
   &--white {
     color: white;
   }
+  @media (max-width: $third-breakpoint) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: $fifth-breakpoint) {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
 .header-4 {
   font-size: 2.8rem;
   font-weight: bold;
   line-height: 4rem;
+  @media (max-width: $fifth-breakpoint) {
+    font-size: 2rem;
+  }
 }
 .header-5 {
   font-size: 2rem;
@@ -55,6 +80,9 @@ body {
     color: $main-yellow;
     font-weight: 400;
     @extend %--uppercase;
+    @media (max-width: $fifth-breakpoint) {
+      text-align: center;
+    }
   }
   &--center {
     text-align: center;
@@ -68,12 +96,12 @@ body {
   }
 }
 .list__link {
- color: $secondary-grey;
- font-size: 2.2rem;
- transition: color .25s ease-in-out;
- @media (max-width: 1600px) {
-   font-size: 1.7rem;
- }
+  color: $secondary-grey;
+  font-size: 2.2rem;
+  transition: color .25s ease-in-out;
+  @media (max-width: 1600px) {
+    font-size: 1.7rem;
+  }
 }
 .list__label {
     font-size: 1.8rem;
@@ -89,6 +117,9 @@ body {
   @media (max-width: $first-breakpoint){
     font-size: 1.5rem;
   }
+  @media (max-width: $fifth-breakpoint) {
+    font-size: 1.3rem;
+  }
   &--light {
     color: $main-grey;
   }
@@ -97,9 +128,15 @@ body {
   }
   &--lightest {
     color: $paragraph-grey;
+    @media (max-width: $fifth-breakpoint) {
+      text-align: center;
+    }
   }
   &--white {
     color: $white;
+    @media (max-width: $fifth-breakpoint) {
+      text-align: center;
+    }
   }
   &--small {
     font-size: 1.6rem;
@@ -108,6 +145,15 @@ body {
     }
     @media (max-width: $second-breakpoint){
       font-size: 1.3rem;
+    }
+    @media (max-width: $third-breakpoint) {
+      font-size: 1.2rem;
+    }
+    @media (max-width: $fourth-breakpoint) {
+      font-size: 1.1rem;
+    }
+    @media (max-width: $fifth-breakpoint) {
+      font-size: 1rem;
     }
   }
   &--smaller {
