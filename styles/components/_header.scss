@@ -5,11 +5,11 @@
   align-items: center;
   padding: 2%;
   position: relative;
+    @media (max-width: $third-breakpoint) {
+      justify-content: flex-start;
+    }
   &__logo {
     padding: 20px 0;
-    @media (max-width: $fourth-breakpoint) {
-      width: 50%;;
-    }
   }
   &__list {
     display: flex;
@@ -18,12 +18,19 @@
     flex-flow: row wrap;
     list-style: none;
     padding: 0;
-    @media (max-width: $fourth-breakpoint) {
-      flex: 1 0 auto;
+    @media (max-width: $third-breakpoint) {
+      position: fixed;
+      width: 400px;
+      top: 0;
+      right: -100%;
+      bottom: 0;
+      flex-flow: column wrap;
+      z-index: 999;
+      align-items: center;
+      justify-content: space-around;
+      background: $white;
       margin: 0;
-    }
-    @media (max-width: $fourth-breakpoint) {
-      display: none;
+      transition: all .5s ease-in-out;
     }
   }
   &__item {
@@ -49,6 +56,12 @@
         top: 5px;
       }
     }
+    &:hover + .list--drop-down {
+      display: block;
+    }
+    @media (max-width: $third-breakpoint){
+      display: block; 
+    }
   }
   &__icons,  &__country  {
     flex: 0 0 150px;
@@ -56,13 +69,21 @@
   &__icons {
     display: flex;
     justify-content: space-around;
-    @media (max-width: $third-breakpoint) {
-      display: none;
+    @media (max-width: $third-breakpoint){
+      position: fixed;
+      top: 35px;
+      right: 50px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      z-index: 100;
     }
   }
   &__country {
     display: flex;
-    position: relative;
+    position: absolute;
+    top: 40px;
+    left: 75%;
     @media (max-width: $third-breakpoint) {
       display: none;
     }
@@ -99,15 +120,15 @@
         }
       }
       &:checked + label {
-        display: block;
+        display: flex;
         }
       }
     }
   &:hover label {
     display: flex;
-    flex: 1 0 100px;
     background: white;
     &:hover {
+      position: relative;
       color: white;
       background: $main-yellow;
     }
@@ -285,11 +306,27 @@
       font-size: 2rem;
       padding: 10px 5px;
     }
-    @media (max-width: $second-breakpoint){
+    @media (max-width: $fourth-breakpoint){
       display: none;
     }
   }
   @media (max-width: $fourth-breakpoint) {
     margin: 30px 0;
   }
+}
+.fa-search, .fa-user, .fa-shopping-bag, .fa-bars {
+  @media (max-width: $third-breakpoint) {
+    margin: 5px;
+    padding: 5px;
+  }
+}
+.fa-bars {
+  display: none;
+  background: none;
+  @media (max-width: $third-breakpoint) {
+    display: block;
+  }
+}
+.icon--drop-down .list--drop-down {
+  display: flex;
 }

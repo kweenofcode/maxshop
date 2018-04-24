@@ -17,22 +17,12 @@ $third-breakpoint: 1200px;
 $fourth-breakpoint: 975px;
 $fifth-breakpoint: 550px;
 
-.list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
 %--outlined {
   outline: 5px solid $white;
   outline-offset: -30px;
 }
 %--padded-bottom {
   padding-bottom: 100px;
-}
-%--padded-top {
-  padding-top: 100px;
 }
 img {
   display: block;

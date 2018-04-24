@@ -20,10 +20,10 @@ body {
   @media (max-width: $first-breakpoint) {
     font-size: 7rem;
   }
-  @media (max-width: $first-breakpoint) {
+  @media (max-width: $fourth-breakpoint) {
     font-size: 6rem;
   }
-  @media (max-width: $fourth-breakpoint) {
+  @media (max-width: $fifth-breakpoint) {
     font-size: 3rem;
   }
 }
@@ -87,6 +87,9 @@ body {
   &--center {
     text-align: center;
   }
+  &--vertical {
+    writing-mode: vertical-lr;
+  }
 }
 .header-6 {
   color: $main-grey;
@@ -99,8 +102,12 @@ body {
   color: $secondary-grey;
   font-size: 2.2rem;
   transition: color .25s ease-in-out;
-  @media (max-width: 1600px) {
+  @media (max-width: $first-breakpoint) {
     font-size: 1.7rem;
+  }
+  @media (max-width: $third-breakpoint) {
+    color: $main-black;
+    font-size: 3rem;
   }
 }
 .list__label {
@@ -158,6 +165,9 @@ body {
   }
   &--smaller {
     font-size: 1.5rem;
+    @media (max-width: $first-breakpoint) {
+      font-size: 1.3rem;
+    }
   }
   &--smallest {
     font-size: 1.4rem;
@@ -205,10 +215,14 @@ body {
     font-size: 1.3rem;
   }
 }
-.fa-search, .fa-user, .fa-shopping-bag {
+.fa-search, .fa-user, .fa-shopping-bag, .fa-bars {
   color: $main-grey;
   font-size: 3rem;
   @media (max-width: $first-breakpoint) {
     font-size: 2rem;
+  }
+  @media (max-width: $third-breakpoint) {
+    font-size: 3rem;
+    color: $main-black;
   }
 }

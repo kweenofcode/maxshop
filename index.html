@@ -9,18 +9,59 @@
   <script defer src=https://use.fontawesome.com/releases/v5.0.6/js/all.js></script>
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
-<body> 
+<body class="main-page"> 
   <!-- 01 - Header -->
-  <header class="main-header">
+  <header id="home" class="main-header">
     <div class="wrapper wrapper--nav">
       <nav class="main-nav">
         <img class="main-nav__logo" src="./images/logo.png" alt="maxshop logo">
         <ul class="main-nav__list">
-          <li><a class="main-nav__item list__link" href="#">Home</a></li>
-          <li><a class="main-nav__item main-nav__item--drop-down list__link" href="#">Shop</a></li>
-          <li><a class="main-nav__item list__link" href="#">Lookbook</a></li>
-          <li><a class="main-nav__item list__link" href="#">Contact</a></li>
-          <li><a class="main-nav__item list__link" href="#">Blog</a></li>
+          <li><button class="main-nav__item btn btn--close">X</button></li>
+          <li><a class="main-nav__item list__link" href="#home">Home</a></li>
+          <li><a class="main-nav__item main-nav__item--drop-down list__link" href="#shop">Shop</a>
+            <div class="list--drop-down">
+              <div class="list list-nested">
+              <ul class="list list--nested">
+                <li><h4 class="header-5 header-5--vertical list__title--vertical">Clothing</h4></li>
+                <li class="paragraph paragraph--small">Shirts</li>
+                <li class="paragraph paragraph--small">Tops</li>
+                <li class="paragraph paragraph--small">Outerwear</li>
+                <li class="paragraph paragraph--small">Bottoms</li>
+                <li class="paragraph paragraph--small">Denim</li>
+                <li class="paragraph paragraph--small">Swim</li>
+              </ul>
+              <ul class="list list--nested">
+                <li><h4 class="header-5 header-5--vertical list__title--vertical">Handbag</h4></li>
+                <li class="paragraph paragraph--small">Work</li>
+                <li class="paragraph paragraph--small">Weekend</li>
+                <li class="paragraph paragraph--small">Backpacks</li>
+                <li class="paragraph paragraph--small">Wallets</li>
+                <li class="paragraph paragraph--small">Work</li>
+              </ul>
+              <ul class="list list--nested">
+                <li><h4 class="header-5 header-5--vertical list__title--vertical">Shoes</h4></li>
+                <li class="paragraph paragraph--small">Sneakers</li>
+                <li class="paragraph paragraph--small">Casual</li>
+                <li class="paragraph paragraph--small">Boots</li>
+                <li class="paragraph paragraph--small">Shoe Care</li>
+              </ul>
+              <ul class="list list--nested">
+                <li><h4 class="header-5 header-5--vertical list__title--vertical">Accessories</h4></li>
+                <li class="paragraph paragraph--small">Sunglasses</li>
+                <li class="paragraph paragraph--small">Watches</li>
+                <li class="paragraph paragraph--small">Jewelry</li>
+                <li class="paragraph paragraph--small">Hats, Scarves & Gloves</li>
+                <li class="paragraph paragraph--small">Ties</li>
+                <li class="paragraph paragraph--small">Underwear & Socks</li>
+                <li class="paragraph paragraph--small">Grooming Products</li>
+                <li class="paragraph paragraph--small">Belts</li>
+              </ul>
+            </div>
+            </div>
+          </li>
+          <li><a class="main-nav__item list__link" href="#lookbook">Lookbook</a></li>
+          <li><a class="main-nav__item list__link" href="#contact">Contact</a></li>
+          <li><a class="main-nav__item list__link" href="#blog">Blog</a></li>
         </ul>
         <div class="main-nav__country">
           <ul class="country list">
@@ -42,14 +83,57 @@
             </li>
             <li class="country__select">
               <input class="country__select__option" type="radio" id="brazil" name="country">
-              <label class="list__label" for="brazil"><img src="./images/Brazil.png" alt="">BR</label></div>
+              <label class="list__label" for="brazil"><img src="./images/Brazil.png" alt="">BR</label>
             </li>
           </ul>
-        <div class="main-nav__icons">
-          <i class="fa fa-search"></i>
-          <i class="fa fa-user"></i>
-          <i class="fa fa-shopping-bag"></i>
         </div>
+        <ul class="main-nav__icons list">
+          <li class="icon--drop-down"><i class="fa fa-search"></i>
+            <!-- <form class="list--drop-down">
+              <h5>Search Now</h5>
+              <input type="text" placeholder="Your search here...">
+              <input class="btn" type="submit" value="Search">
+            </form> -->
+          </li>
+          <li class="icon--drop-down"><i class="fa fa-user"></i>
+            <!-- <div class="list list--nested list--drop-down">
+              <ul>
+                <li><h5>Manage Account</h5></li>
+                <li>Login / Register</li>
+                <li> Wishlist</li>
+                <li>Compare Items</li>
+                <li>Checkout</li>
+              </ul>
+              <ul class="list list--nested list--drop-down">
+                <li><h5>Currency</h5></li>
+                <li>England (GBP)</li>
+                <li>United States (USD)</li>
+                <li>France (EURO)</li>
+              </ul>
+            <div> -->
+          </li>
+          <li><i class="fa fa-shopping-bag"></i>
+            <!-- <ul class="list">
+              <ul class="list list--nested list--drop-down">
+                <li><h5>Shopping Bag</h5></li>
+                <li><p>you have <span>3 item(s) in your bag</span></p></li>
+                <li><div><img src="" alt="">
+                </div><div><p class="paragraph paragraph--small">Lipsy Crochet Applique Wrap
+                  <br>
+                  <span class="paragraph--light">Blouse</span></p>
+                  <h5 class="header-5 header-5--small sale__item__cost">$120.00</h5>
+                </li>
+                <li><div><div><img src="" alt=""></div><div><p class="paragraph paragraph--small">Lipsy Crochet Applique Wrap
+                  <br>
+                  <span class="paragraph--light">Blouse</span>
+                </p>
+                <h5 class="header-5 header-5--small sale__item__cost">$120.00</h5></div></div></li>
+                <li><p>Subtotal</p><h5>$320.00</h5></li>
+                <li><button class="btn">View Bag</button><button class="btn">Checkout</button></li>
+              </ul> -->
+          </li>
+          <li><button class="open-btn btn--open"><i class="fa fa-bars"></i></button></li>
+        </ul>
       </nav>
       <div class="headline">
         <div class="headline__text">
@@ -72,7 +156,7 @@
     </div>
   </header>
   <!-- 03 - Collections -->
-  <nav class="collections-nav">
+  <nav class="collections-nav" id="shop">
     <ul class="wrapper list">
       <li class="collections-nav__item">
         <h4 class="collections-nav__item__title header-4"><span class="collections-nav__item__title__line">Fashion</span><br><span class="collections-nav__item__title__line">& Accessories</span></h4>
@@ -143,7 +227,7 @@
           </li>
         </ul>
       </div>
-      <div class="headline">
+      <div class="headline" id="lookbook">
         <div class="flip-image">
           <img src="./images/main-image-2.png" alt="">
           <p class="paragraph--vertical paragraph--vertical--uppercase flip-image__paragraph">By Marc Jacobs</p>
@@ -221,7 +305,7 @@
     </section>
   </main>
   <!-- 07 - Blog -->
-  <section class="wrapper wrapper--blog">
+  <section id="blog" class="wrapper wrapper--blog">
     <div class="wrapper__inner-wrapper wrapper__inner-wrapper--bottom">
       <h3 class="blog-title header-3">Our Blog</h3>
       <article class="blog blog--first">
@@ -270,8 +354,8 @@
     </div>
   </section>
   <!-- 08 - Footer -->
-  <footer class="main-footer">
-    <div class="main-footer__wrapper">
+  <footer id="contact" class="main-footer">
+    <div class="main-footer__wrapper wrapper">
       <div class="main-footer__wrapper__content--contact">
         <h5 class="header-5 header-5--footer">Contact</h5>
         <p class="contact__info paragraph paragraph--small paragraph--white">621 Bingammon Branch Road Warwick<br>NY 10990</p>
@@ -345,6 +429,7 @@
         </div>
       <!-- 09 - Subfooter -->
       <div class="subfooter">
+        <div class="wrapper">
         <div class="wrapper--footer">
           <div class="subfooter__content footer--wrapper copyright">
             <p class="subfooter__nav__item paragraph--small paragraph--white">&copy; Maxshop 2016. All Rights Reserved</p>
@@ -356,6 +441,26 @@
           </div>
         </div>
       </div>
+      </div>
     </footer>
 </body>
+<script>
+  let closeBtn = document.querySelector('.btn--close');
+  let openBtn = document.querySelector('.open-btn');
+  let mainNav = document.querySelector('.main-nav__list');
+  let mainNavItem = document.querySelectorAll('.main-nav__item');
+  let body = document.querySelector('.main-page');
+  
+  function openNav() {
+    mainNav.style.right = '0';
+    body.style.right= '400px';
+    } 
+  function closeNav() {
+    mainNav.style.right = "-100%";
+    body.style.right = '0';
+  }
+  openBtn.addEventListener('click', openNav, false);
+  closeBtn.addEventListener('click', closeNav, false);
+  mainNavItem.forEach(item => item.addEventListener('click', closeNav));
+</script>
 </html>

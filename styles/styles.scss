@@ -14,8 +14,12 @@
 // 08 - Footer
 // 09 - Subfooter
 
+.main-page {
+  position: relative;
+  right: 0;
+  transition: all .5s ease-in-out;
+}
 .wrapper {
-  @extend %--padded-top;
   margin: 0 auto;
   max-width: 1920px;
   &--footer, &--nav {
@@ -80,6 +84,11 @@
     border: 2px solid $main-yellow;
     color: white;
   }
+  @media (max-width: $third-breakpoint) {
+    background: $main-yellow;
+    border: 2px solid $main-yellow;
+    color: white;
+  }
   &--square {
     background: none;
     border: 2px solid $main-grey;
@@ -92,14 +101,58 @@
       color: $main-yellow;
     }
   }
+  &--close {
+    display: none;
+    min-width: 0;
+    border-radius: 50%;
+    padding: 15px 20px;
+    @media (max-width: $third-breakpoint){
+      display: block;
+    }
+  }
+  &--open {
+    border: none;
+    background: none;
+  }
+}
+.list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  &--nested {
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    position: relative;
+  }
+  &__title--vertical {
+    position: absolute;
+    left: -50px;
+    margin-top: 5px;
+    transform: rotate(180deg);
+  }
+  &--drop-down{
+    position: absolute;
+    left: 0;
+    bottom: -260px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    right: 0;
+    padding: 50px;
+    border: 1px solid $main-black;
+    display: none;
+    z-index: 999;
+    background: $white;
+  }
 }
 .collections-nav__item {
-  @extend %--padded-top;
   display: flex;
   flex: 1 0 250px;
   flex-flow: row wrap;
   justify-content: space-around;
   position: relative;
+  margin: 200px 0;
   &:nth-child(-n +2) {
     margin-right: 20px;
   }
@@ -268,7 +321,7 @@
       height: auto;
     }
     @media (max-width: $fifth-breakpoint) {
-    display: flex;
+      display: flex;
     }
   }
   &__text {
@@ -311,8 +364,11 @@
   &--second {
     bottom: 50px;
     position: relative;
+    @media (max-width: $second-breakpoint) {
+      bottom: 20px;
+    }
     @media (max-width: $third-breakpoint) {
-        bottom: 0;
+      bottom: 0;
     }
   }
   @media (max-width: $third-breakpoint) {
@@ -330,14 +386,14 @@
   }
 }
 .cta {
-  display: flex;
   width: 100%;
+  display: flex;
   &__footer {
     align-items: center;
     background-position: center;
     background-size: cover;
     display: flex;
-    flex: 1 0 150px;
+    flex: 1 0 150px ;
     flex-flow: column wrap;
     padding: 150px 50px;
     &--first {
