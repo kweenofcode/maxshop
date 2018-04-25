@@ -90,6 +90,11 @@ body {
   &--vertical {
     writing-mode: vertical-lr;
   }
+  &--hover {
+    font-size: 1rem;
+    color: $main-grey;
+    display: inline;
+  }
 }
 .header-6 {
   color: $main-grey;
@@ -129,6 +134,9 @@ body {
   }
   &--light {
     color: $main-grey;
+    @media (max-width: $fourth-breakpoint) {
+      color: $main-black;
+    }
   }
   &--lighter {
     color: $secondary-grey;
@@ -185,8 +193,11 @@ body {
       writing-mode: vertical-lr;
     }
   }
-  &--white {
-    color: $white;
+  &--yellow{
+    color: $main-yellow;
+  }
+  &--unpadded {
+    margin: 0;
   }
 }
 .btn {
