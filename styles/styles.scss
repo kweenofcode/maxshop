@@ -2,6 +2,7 @@
 @import "utils";
 @import "typography";
 @import "components/lists";
+@import "components/buttons";
 @import "components/header";
 
 
@@ -64,72 +65,6 @@
     padding: 0 0 50px 0;
   }
 }
-.btn {
-  border: 2px solid $main-yellow;
-  border-radius: 30px;
-  display: inline-block;
-  min-width: 175px;
-  padding: 20px;
-  transition: all .25s ease-in-out;
-  @media (max-width: $second-breakpoint) {
-    min-width: 150px ;
-  }
-  @media (max-width: $third-breakpoint) {
-    min-width: 120px ;
-  }
-  &--light {
-    border: 2px solid $white;
-  }
-  &:hover {
-    background: $main-yellow;
-    border: 2px solid $main-yellow;
-    color: white;
-  }
-  @media (max-width: $third-breakpoint) {
-    background: $main-yellow;
-    border: 2px solid $main-yellow;
-    color: white;
-  }
-  &--square {
-    background: none;
-    border: 2px solid $main-grey;
-    border-radius: 0;
-    min-width: 0;
-    margin: 10px 10px 0 0;
-    padding: 10px;
-    &:hover {
-      background: none;
-      color: $main-yellow;
-    }
-  }
-  &--close {
-    display: none;
-    min-width: 0;
-    border-radius: 50%;
-    padding: 15px 20px;
-    @media (max-width: $third-breakpoint){
-      display: block;
-    }
-  }
-  &--open {
-    border: none;
-    background: none;
-  }
-  &--hover {
-    min-width: 100px;
-    padding: 10px;
-    margin-top: 10px;
-  }
-  &--center {
-    margin: 0;
-  }
-  &--tags {
-    @media (max-width: $fourth-breakpoint) {
-      margin-right: 10px;
-      margin-bottom: 10px;
-    }
-  }
-}
 .collections-nav__item {
   display: flex;
   flex: 1 0 250px;
@@ -143,7 +78,7 @@
   &__title {
     display: inline-block;
     bottom: 50px;
-    left: -100px;
+    left: 0;
     margin: 10px;
     position: absolute;
     &__line {
@@ -160,7 +95,7 @@
     }
   }
   &__paragraph {
-    left: -60px;
+    left: 20px;
     margin: 0;
     position: absolute;
     top: 30%;
@@ -176,10 +111,10 @@
       width: 2px; 
     }
     @media (max-width: $first-breakpoint) {
-      left: -12%;
+      left: 0;
     }
     @media (max-width: $second-breakpoint) {
-      top: 40%;      
+      top: 30%;      
       left: -15px;
     }
     @media (max-width: $third-breakpoint) {
@@ -201,6 +136,7 @@
     margin: 40px 0;
   }
 }
+
 .season {
   position: relative;
   &__title--vertical {

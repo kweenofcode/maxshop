@@ -160,11 +160,13 @@
       </nav>
       <div class="headline">
         <div class="headline__text">
-          <h3 class="header-3 headline__text__date">26/02/2016</h3>
-          <p class="headline__text__paragraph paragraph paragraph--light paragraph--large">Bring glamour to your wardrobe</p>
-          <h1 class="headline__text__title header-1">Summer <br> Collection 2016</h1>
-          <a class="btn btn--large" href="#">View More</a>
-          <img class="headline__text__icon" src="./images/icon.png" alt="">
+          <div class="headline__text__container">
+            <h3 class="header-3 headline__text__date">26/02/2016</h3>
+            <p class="headline__text__paragraph paragraph paragraph--light paragraph--large">Bring glamour to your wardrobe</p>
+            <h1 class="headline__text__title header-1">Summer <br> Collection 2016</h1>
+            <a class="btn btn--large" href="#">View More</a>
+            <img class="headline__text__icon" src="./images/icon.png" alt="">
+          </div>
         </div>
         <div class="flip-image">
           <div>
@@ -184,7 +186,7 @@
       <li class="collections-nav__item">
         <h4 class="collections-nav__item__title header-4"><span class="collections-nav__item__title__line">Fashion</span><br><span class="collections-nav__item__title__line">& Accessories</span></h4>
         <p class="paragraph paragraph--vertical collections-nav__item__paragraph"> Diverse Products</p>
-        <img src="./images/image-1.png" alt="A model in a white blazer">
+        <img class="collections-nav__item--first" src="./images/image-1.png" alt="A model in a white blazer">
       </li>
       <li class="collections-nav__item">
         <h4 class="collections-nav__item__title header-4"><span class="collections-nav__item__title__line">New</span><br><span class="collections-nav__item__title__line">Collections</span></h4>
@@ -490,6 +492,7 @@
   hoverBtn.forEach(btn => btn.addEventListener('click', function() {
     this.classList.toggle('display'); 
   }));
+  
   
 </script>
 </html>

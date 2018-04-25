@@ -152,28 +152,38 @@
     position: relative;
     z-index: 10;
     left: 200px;
+    flex: 1 0 300px;
+    &__container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
     @media (max-width: $first-breakpoint) {
       left: 0;
       right: 0;
     }
     @media (max-width: $fourth-breakpoint) {
       position: absolute;
-      top: 50%;
+      top: 15%;
       text-align: center;
-      transform: translateY(-50%);
     }
     @media (max-width: $fifth-breakpoint) {
-      top: 40%;
+      top: 20%;
     }
     &--right {
       text-align: right;
       position: absolute;
       padding: 30% 0;
       right: 0;
-      @media (max-width: $fourth-breakpoint) {
-        top: 50%;
-        text-align: center;
+      @media (max-width: $third-breakpoint) {
+        top: 30%;
         padding: 0;
+        text-align: center;
+      }
+      @media (max-width: $fifth-breakpoint) {
+        top: 15%;
       }
     }
     &__date{
@@ -208,7 +218,7 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      @media (max-width: $fourth-breakpoint) {
+      @media (max-width: $third-breakpoint) {
         display: none;
       }
     }
@@ -340,10 +350,12 @@
 }
 .icon--drop-down{
   position: relative;
-  // &:hover + .list--drop-down {
-  //   display: block;
-  // }
-} 
+  @media (min-width: $third-breakpoint) { 
+    &:hover + .list--drop-down {
+      display: block;
+    }
+  }
+}
 @media (max-width: $third-breakpoint) {
   .display  + .list--drop-down{
     display: block;
