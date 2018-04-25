@@ -1,11 +1,8 @@
 .DS_Store
-<<<<<<< HEAD
 *.psd
 *.config
 *.pdf
 *.pxm
-=======
 styles/styles.css
 *.psd
 *.config
->>>>>>> 80f06a555093bc781ee6e8e16cd491fd9557367a
